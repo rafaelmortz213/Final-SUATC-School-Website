@@ -1,0 +1,625 @@
+/* ========================================
+   SCHOOL WEBSITE STYLES
+   Green Color Scheme
+   ======================================== */
+
+/* ========================================
+   CSS VARIABLES & RESET
+   ======================================== */
+:root {
+    --primary-color: #1B5E20;     /* Academic Green */
+    --primary-light: #4CAF50;     /* Lighter Green */
+    --accent-color: #FFD700;      /* Gold Accent */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --overlay-color: rgba(0, 40, 20, 0.70); /* Dark green overlay */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition: all 0.3s ease;
+    --white: #ffffff;
+    --light-bg: #f4f4f4;
+    --section-padding: 80px 0;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   NAVBAR STYLES
+   ======================================== */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.navbar .container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: var(--primary-light);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 15px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    background-color: rgba(27, 94, 32, 0.05);
+}
+
+/* --- DROPDOWN MENU --- */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    border-top: 3px solid var(--primary-color);
+    z-index: 1001;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    padding-left: 25px;
+}
+
+/* --- MOBILE MENU TOGGLE --- */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+/* ========================================
+   HERO SLIDER STYLES
+   ======================================== */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--overlay-color) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-light);
+    z-index: 3;
+    width: 90%;
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-headline {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero-headline span {
+    color: var(--accent-color);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--primary-color);
+}
+
+/* --- SLIDER DOTS --- */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+/* ========================================
+   ANNOUNCEMENTS SECTION
+   ======================================== */
+.announcements-section {
+    padding: var(--section-padding);
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.announcements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.announcement-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.announcement-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.announcement-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.btn-read {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.btn-read:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+.about-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content .section-title {
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+/* ========================================
+   STRANDS SECTION
+   ======================================== */
+.strands-section {
+    padding: var(--section-padding);
+    background-color: var(--light-bg);
+}
+
+.strands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.strand-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.strand-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+.strand-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.strand-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.strand-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn-strand {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.btn-strand:hover {
+    background-color: var(--primary-light);
+    color: var(--white);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* --- TABLET & MOBILE --- */
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-link {
+        padding: 15px;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        background-color: #f9f9f9;
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .dropdown-menu.open {
+        display: block;
+        max-height: 500px;
+    }
+
+    .dropdown-menu li a {
+        padding-left: 30px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .announcements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .strands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .hero-slider {
+        height: 70vh;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .announcements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .strands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* --- SMALL MOBILE --- */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero-headline {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .strand-icon {
+        font-size: 2.5rem;
+    }
+}

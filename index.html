@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website - Home</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="img/titleheader.png" alt="St. Uriel Academy of Taguig City, Inc. Header" style="height: 80px; vertical-align: middle; margin-left: -40px;">
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">About <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Mission and Vision</a></li>
+                        <li><a href="#">School Hymn</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">Student Organizations</a></li>
+                        <li><a href="#">Facilities</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Admission <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Admission Requirements</a></li>
+                        <li><a href="#">Enrollment Process</a></li>
+                        <li><a href="#">Tuition and Fees</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Academics <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Senior High School Tracks</a></li>
+                        <li><a href="#">Junior High School</a></li>
+                        <li><a href="#">Elementary</a></li>
+                        <li><a href="#">Nursery or Kindergarten</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Scholarships <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Taguig Learners Certificate Scholarship</a></li>
+                        <li><a href="#">DepEd SHS Voucher Program</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a href="#" class="nav-link">Student Life</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SLIDER SECTION -->
+    <section class="hero-slider" id="heroSlider">
+        
+        <!-- SLIDE 1: The Main Enrollment Announcement -->
+        <div class="slide active" style="background-image: url('img/mainslide1.jpg');">
+            <div class="hero-content">
+                <p class="hero-subtitle">Welcome to St. Uriel Academy of Taguig City, Inc.</p>
+                <h1 class="hero-headline">Enrollment for School Year <br><span>2025–2026</span> is Now Ongoing</h1>
+                <p class="hero-description">
+                    Join a community dedicated to academic excellence and character building. 
+                    Secure your child's future today by registering for the upcoming academic year.
+                </p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Enroll Now</a>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: Campus Life Highlight -->
+        <div class="slide" style="background-image: url('img/sslg.jpg');">
+            <div class="hero-content">
+                <p class="hero-subtitle">Campus Life</p>
+                <h1 class="hero-headline">A School of <span>Opportunities</span></h1>
+                <p class="hero-description">
+                    Explore our vibrant campus life filled with extracurricular activities, clubs, and events that foster growth and camaraderie among students.
+                </p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Virtual Tour</a>
+                    <a href="#" class="btn btn-secondary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: Academic Achievement -->
+        <div class="slide" style="background-image: url('img/slide3img.jpg');">
+            <div class="hero-content">
+                <p class="hero-subtitle">Academic Excellence</p>
+                <h1 class="hero-headline">Shaping the <span>Leaders</span> of Tomorrow</h1>
+                <p class="hero-description">
+                    Our curriculum is designed to challenge students and prepare them for global success.
+                </p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Our Curriculum</a>
+                    <a href="#" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="slider-dots">
+            <div class="dot active" onclick="currentSlide(1)"></div>
+            <div class="dot" onclick="currentSlide(2)"></div>
+            <div class="dot" onclick="currentSlide(3)"></div>
+        </div>
+
+    </section>
+
+        <!-- ANNOUNCEMENTS SECTION -->
+    <section class="announcements-section">
+        <div class="container">
+            <h2 class="section-title">Latest Announcements</h2>
+            <p class="section-subtitle">Stay updated with the latest news and events</p>
+            
+            <div class="announcements-grid">
+                <!-- Announcement Card 1 -->
+                <div class="announcement-card">
+                    <div class="card-image">
+                        <img src="img/slide1img.jpg" alt="Enrollment Open">
+                    </div>
+                    <div class="card-content">
+                        <h3>Enrollment Open for SY 2026-2027</h3>
+                        <p>Registration is now open for the upcoming school year. Visit our enrollment page for more details.</p>
+                        <a href="#" class="btn-read">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Announcement Card 2 -->
+                <div class="announcement-card">
+                    <div class="card-image">
+                        <img src="announcement2.jpg" alt="Academic Fair">
+                    </div>
+                    <div class="card-content">
+                        <h3>Annual Academic Fair</h3>
+                        <p>Join us for our annual academic fair showcasing student projects and innovations.</p>
+                        <a href="#" class="btn-read">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Announcement Card 3 -->
+                <div class="announcement-card">
+                    <div class="card-image">
+                        <img src="announcement3.jpg" alt="Sports Meet">
+                    </div>
+                    <div class="card-content">
+                        <h3>Inter-School Sports Meet</h3>
+                        <p>Our athletes are preparing for the upcoming inter-school sports competition.</p>
+                        <a href="#" class="btn-read">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Announcement Card 4 -->
+                <div class="announcement-card">
+                    <div class="card-image">
+                        <img src="announcement4.jpg" alt="Parent-Teacher Conference">
+                    </div>
+                    <div class="card-content">
+                        <h3>Parent-Teacher Conference</h3>
+                        <p>Monthly parent-teacher conference scheduled for next week. Attendance is encouraged.</p>
+                        <a href="#" class="btn-read">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About St. Uriel Academy</h2>
+                <p class="about-text">
+                    St. Uriel Academy of Taguig City, Inc. has been a beacon of academic excellence and moral integrity for over two decades. 
+                    We are committed to nurturing students with a holistic education that combines academic rigor with character development. 
+                    Our dedicated faculty and state-of-the-art facilities provide an environment where students can thrive and reach their full potential.
+                </p>
+                <a href="#" class="btn btn-primary">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SENIOR HIGH STRANDS SECTION -->
+    <section class="strands-section">
+        <div class="container">
+            <h2 class="section-title">Senior High School Strands</h2>
+            <p class="section-subtitle">Choose your path to success</p>
+            
+            <div class="strands-grid">
+                <!-- HUMSS Strand -->
+                <div class="strand-card">
+                    <div class="strand-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>HUMSS</h3>
+                    <p>Humanities and Social Sciences. Prepare for careers in law, education, social work, and public service.</p>
+                    <a href="#" class="btn-strand">Learn More</a>
+                </div>
+
+                <!-- ABM Strand -->
+                <div class="strand-card">
+                    <div class="strand-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>ABM</h3>
+                    <p>Accountancy, Business, and Management. Develop skills for entrepreneurship and business leadership.</p>
+                    <a href="#" class="btn-strand">Learn More</a>
+                </div>
+
+                <!-- GAS Strand -->
+                <div class="strand-card">
+                    <div class="strand-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>GAS</h3>
+                    <p>General Academic Strand. Explore various disciplines and prepare for diverse college courses.</p>
+                    <a href="#" class="btn-strand">Learn More</a>
+                </div>
+
+                <!-- ICT Strand -->
+                <div class="strand-card">
+                    <div class="strand-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>ICT</h3>
+                    <p>Information and Communications Technology. Master digital skills for the tech-driven future.</p>
+                    <a href="#" class="btn-strand">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 St. Uriel Academy of Taguig City, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
