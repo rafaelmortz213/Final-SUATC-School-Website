@@ -5,6 +5,47 @@
 let slideIndex = 1;
 let slideInterval;
 
+// ========================================
+// SMOOTH PAGE TRANSITION
+// ========================================
+document.addEventListener('DOMContentLoaded', function () {
+    // Fade in on load
+    document.body.classList.add('fade-transition');
+    setTimeout(function () {
+        document.body.classList.add('fade-in');
+    }, 10);
+
+    // Fade out on link click, but don't reload for same-page anchor links
+    document.querySelectorAll('a').forEach(function (link) {
+        // Only apply to internal links
+        if (link.hostname === window.location.hostname && link.getAttribute('href') && !link.getAttribute('target')) {
+            link.addEventListener('click', function (e) {
+                // Ignore if modifier keys are pressed (open in new tab, etc.)
+                if (e.ctrlKey || e.shiftKey || e.metaKey || e.altKey) return;
+
+                var href = link.getAttribute('href');
+                // If href is just a hash or points to the current page with the same hash, let browser handle it
+                if (href.startsWith('#')) return;
+
+                var currentUrl = window.location.pathname + window.location.search;
+                var linkUrl = document.createElement('a');
+                linkUrl.href = href;
+                var linkPath = linkUrl.pathname + linkUrl.search;
+
+                // If only the hash is different (same page), let browser handle it
+                if (currentUrl === linkPath && linkUrl.hash) return;
+
+                // Otherwise, do the fade transition
+                e.preventDefault();
+                document.body.classList.remove('fade-in');
+                setTimeout(function () {
+                    window.location = link.href;
+                }, 400); // match transition duration
+            });
+        }
+    });
+});
+
 // Function to show specific slide
 function showSlides(n) {
     let i;
