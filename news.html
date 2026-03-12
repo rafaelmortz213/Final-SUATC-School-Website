@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School News and Announcements</title>
+    <link rel="stylesheet" href="assets/css/nslider.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/titleheader.png" alt="St. Uriel Academy of Taguig City, Inc. Header" style="height: 80px; vertical-align: middle; margin-left: -40px;">
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a href="about.html" class="nav-link">About <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Mission and Vision</a></li>
+                        <li><a href="#">School Hymn</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">Student Organizations</a></li>
+                        <li><a href="#">Team Members</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="admission.html" class="nav-link">Admission <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Admission Requirements</a></li>
+                        <li><a href="#">Enrollment Process</a></li>
+                        <li><a href="#">Tuition and Fees</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="academics.html" class="nav-link">Academics <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Senior High School Tracks</a></li>
+                        <li><a href="#">Junior High School</a></li>
+                        <li><a href="#">Elementary</a></li>
+                        <li><a href="#">Nursery or Kindergarten</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- ========================================
+       PAGE HEADER
+       ======================================== -->
+    <section class="news-header">
+        <div class="container">
+            <h1 class="page-title">School News and Announcements</h1>
+            <p class="page-subtitle">
+                Stay updated with the latest announcements, school events, student achievements, 
+                and important updates from our academic community.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================
+       FEATURED NEWS SLIDER
+       ======================================== -->
+    <section class="featured-slider">
+        <div class="container">
+            <div class="slider-wrapper">
+                <div class="slider-container">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <div class="slide-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Graduation Ceremony</span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <span class="slide-category">Announcement</span>
+                            <h2 class="slide-title">Annual Graduation Ceremony 2024</h2>
+                            <p class="slide-summary">
+                                Join us as we celebrate the achievements of our graduating students 
+                                in a memorable ceremony filled with pride and accomplishment.
+                            </p>
+                            <div class="slide-meta">
+                                <span class="slide-date"><i class="fas fa-calendar"></i> June 15, 2024</span>
+                            </div>
+                            <a href="#" class="btn-slide">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <div class="slide-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-trophy"></i>
+                                <span>School Achievements</span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <span class="slide-category">Achievement</span>
+                            <h2 class="slide-title">National Science Competition Winners</h2>
+                            <p class="slide-summary">
+                                Our students have secured first place in the National Science 
+                                Competition, bringing honor to our institution.
+                            </p>
+                            <div class="slide-meta">
+                                <span class="slide-date"><i class="fas fa-calendar"></i> May 20, 2024</span>
+                            </div>
+                            <a href="#" class="btn-slide">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <div class="slide-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-users"></i>
+                                <span>School Events</span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <span class="slide-category">Event</span>
+                            <h2 class="slide-title">Community Outreach Program</h2>
+                            <p class="slide-summary">
+                                Students and faculty participated in a community service 
+                                initiative to support local families in need.
+                            </p>
+                            <div class="slide-meta">
+                                <span class="slide-date"><i class="fas fa-calendar"></i> April 10, 2024</span>
+                            </div>
+                            <a href="#" class="btn-slide">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="slider-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+
+                <!-- Dots -->
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       NEWS FILTER AND SEARCH
+       ======================================== -->
+    <section class="news-filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <!-- Category Filters -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All News</button>
+                    <button class="filter-btn" data-filter="announcements">Announcements</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="achievements">Student Achievements</button>
+                    <button class="filter-btn" data-filter="programs">School Programs</button>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchNews" placeholder="Search news articles...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       LATEST NEWS GRID
+       ======================================== -->
+    <section class="news-grid-section">
+        <div class="container">
+            <div class="news-layout">
+                <!-- Main News Grid -->
+                <div class="news-grid">
+                    <!-- News Card 1 -->
+                    <div class="news-card" data-category="events">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-running"></i>
+                                <span>Event</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Event</span>
+                            <h3 class="card-title">School Intramurals Opening Ceremony</h3>
+                            <p class="card-summary">
+                                The annual intramurals kicked off with an exciting opening ceremony 
+                                featuring all grade levels competing in various sports.
+                            </p>
+                            <div class="card-meta">
+                                <span class="card-date"><i class="fas fa-calendar"></i> March 15, 2024</span>
+                            </div>
+                            <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- News Card 2 -->
+                    <div class="news-card" data-category="programs">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Program</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Program</span>
+                            <h3 class="card-title">ICT Club Technology Workshop</h3>
+                            <p class="card-summary">
+                                Students participated in a hands-on technology workshop covering 
+                                programming basics and digital literacy skills.
+                            </p>
+                            <div class="card-meta">
+                                <span class="card-date"><i class="fas fa-calendar"></i> March 10, 2024</span>
+                            </div>
+                            <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- News Card 3 -->
+                    <div class="news-card" data-category="achievements">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-medal"></i>
+                                <span>Achievement</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Achievement</span>
+                            <h3 class="card-title">Senior High School Recognition Day</h3>
+                            <p class="card-summary">
+                                Outstanding SHS students were recognized for their academic 
+                                excellence and leadership contributions.
+                            </p>
+                            <div class="card-meta">
+                                <span class="card-date"><i class="fas fa-calendar"></i> March 5, 2024</span>
+                            </div>
+                            <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- News Card 4 -->
+                    <div class="news-card" data-category="announcements">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-bullhorn"></i>
+                                <span>Announcement</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Announcement</span>
+                            <h3 class="card-title">New School Facilities Announcement</h3>
+                            <p class="card-summary">
+                                The school will be opening a new science laboratory and computer 
+                                room to enhance learning experiences.
+                            </p>
+                            <div class="card-meta">
+                                <span class="card-date"><i class="fas fa-calendar"></i> February 28, 2024</span>
+                            </div>
+                            <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- News Card 5 -->
+                    <div class="news-card" data-category="events">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-hands-helping"></i>
+                                <span>Event</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Event</span>
+                            <h3 class="card-title">Community Outreach Program</h3>
+                            <p class="card-summary">
+                                Students and faculty participated in a community service 
+                                initiative to support local families in need.
+                            </p>
+                            <div class="card-meta">
+                                <span class="card-date"><i class="fas fa-calendar"></i> February 20, 2024</span>
+                            </div>
+                            <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- News Card 6 -->
+                    <div class="news-card" data-category="programs">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-book-reader"></i>
+                                <span>Program</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Program</span>
+                            <h3 class="card-title">Reading Month Celebration</h3>
+                            <p class="card-summary">
+                                The school celebrated Reading Month with book fairs, 
+                                storytelling sessions, and literacy activities.
+                            </p>
+                            <div class="card-meta">
+                                <span class="card-date"><i class="fas fa-calendar"></i> February 15, 2024</span>
+                            </div>
+                            <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="news-sidebar">
+                    <!-- Recent News -->
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Recent News</h4>
+                        <ul class="recent-news-list">
+                            <li>
+                                <a href="#">
+                                    <span class="recent-date">March 15, 2024</span>
+                                    <span class="recent-title">School Intramurals Opening</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="recent-date">March 10, 2024</span>
+                                    <span class="recent-title">ICT Club Technology Workshop</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="recent-date">March 5, 2024</span>
+                                    <span class="recent-title">SHS Recognition Day</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="recent-date">February 28, 2024</span>
+                                    <span class="recent-title">New School Facilities</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Upcoming Events -->
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Upcoming Events</h4>
+                        <ul class="upcoming-events-list">
+                            <li>
+                                <span class="event-date">April 10</span>
+                                <span class="event-title">Science Fair</span>
+                            </li>
+                            <li>
+                                <span class="event-date">April 25</span>
+                                <span class="event-title">Parent-Teacher Conference</span>
+                            </li>
+                            <li>
+                                <span class="event-date">May 15</span>
+                                <span class="event-title">Sports Meet</span>
+                            </li>
+                            <li>
+                                <span class="event-date">June 15</span>
+                                <span class="event-title">Graduation Ceremony</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Subscribe Widget -->
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Subscribe to Updates</h4>
+                        <p class="widget-description">Get the latest news delivered to your inbox.</p>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       JAVASCRIPT
+       ======================================== -->
+    <script src="script.js"></script>
+</body>
+</html>

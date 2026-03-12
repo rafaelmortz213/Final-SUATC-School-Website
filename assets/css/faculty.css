@@ -1,0 +1,260 @@
+/* ========================================
+   SECTION: FACULTY AND STAFF
+   ======================================== */
+.faculty-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- FACULTY GROUP --- */
+.faculty-group {
+    margin-bottom: 60px;
+}
+
+.faculty-group:last-child {
+    margin-bottom: 0;
+}
+
+.group-title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+}
+
+/* --- ADMIN GRID (Larger Cards) --- */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.admin-card {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* --- TEACHERS GRID (Standard) --- */
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* --- FACULTY CARD --- */
+.faculty-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.faculty-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+/* --- CARD IMAGE --- */
+.card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.faculty-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+/* --- CARD INFO --- */
+.card-info {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.card-info h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.card-info .position {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* --- SOCIAL ICONS (Hidden by Default) --- */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.faculty-card:hover .social-icons {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(27, 94, 32, 0.1);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    transform: scale(1.1);
+}
+
+/* --- ADMIN CARD SPECIFIC --- */
+.admin-card .card-image {
+    height: 300px; /* Larger photo for admin */
+}
+
+.admin-card .card-info h4 {
+    font-size: 1.2rem;
+}
+
+.admin-card .card-info .position {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* --- TABLET --- */
+@media (max-width: 1024px) {
+    .admin-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teachers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .admin-card {
+        max-width: 100%;
+    }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teachers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .card-info h4 {
+        font-size: 1rem;
+    }
+
+    .card-info .position {
+        font-size: 0.85rem;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
+/* --- SMALL MOBILE --- */
+@media (max-width: 480px) {
+    .teachers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .card-info {
+        padding: 15px;
+    }
+
+    .card-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .card-info .position {
+        font-size: 0.8rem;
+    }
+
+    .social-icons a {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+
+    .group-title {
+        font-size: 1.3rem;
+    }
+}

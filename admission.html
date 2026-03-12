@@ -7,17 +7,18 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Link to CSS File -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="adm.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/adm.css">
+    <link rel="stylesheet" href="assets/css/transition.css">
 
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
+        <!-- NAVIGATION BAR -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">
-                <img src="img/titleheader.png" alt="St. Uriel Academy of Taguig City, Inc. Header" style="height: 80px; vertical-align: middle; margin-left: -40px;">
+            <a href="index.html" class="logo">
+                <img src="assets/img/titleheader.png" alt="St. Uriel Academy of Taguig City, Inc. Header" style="height: 80px; vertical-align: middle; margin-left: -40px;">
             </a>
 
             <div class="menu-toggle" id="mobile-menu">
@@ -27,22 +28,22 @@
             </div>
 
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">About <i class="fas fa-chevron-down"></i></a>
+                    <a href="about.html" class="nav-link">About <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">History</a></li>
                         <li><a href="#">Mission and Vision</a></li>
                         <li><a href="#">School Hymn</a></li>
                         <li><a href="#">Faculty</a></li>
                         <li><a href="#">Student Organizations</a></li>
-                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Team Members</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Admission <i class="fas fa-chevron-down"></i></a>
+                    <a href="admission.html" class="nav-link">Admission <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Admission Requirements</a></li>
                         <li><a href="#">Enrollment Process</a></li>
@@ -53,7 +54,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Academics <i class="fas fa-chevron-down"></i></a>
+                    <a href="academics.html" class="nav-link">Academics <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Senior High School Tracks</a></li>
                         <li><a href="#">Junior High School</a></li>
@@ -63,16 +64,7 @@
                     </ul>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Scholarships <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Taguig Learners Certificate Scholarship</a></li>
-                        <li><a href="#">DepEd SHS Voucher Program</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item"><a href="#" class="nav-link">Student Life</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -616,6 +608,208 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+   SECTION: SCHOLARSHIPS
+   ======================================== -->
+<section class="scholarships-section">
+    <div class="container">
+        <h2 class="section-title">Scholarships</h2>
+        <p class="section-subtitle">Our school offers scholarship opportunities for qualified students. Please review the programs below.</p>
+
+        <!-- INQUIRY INFORMATION BOX -->
+        <div class="inquiry-box">
+            <div class="inquiry-icon">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="inquiry-content">
+                <h3>For inquiries, please call:</h3>
+                <div class="phone-numbers">
+                    <a href="tel:09566354765" class="phone-number">
+                        <i class="fas fa-phone"></i> 09566354765
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="tel:091260577" class="phone-number">
+                        <i class="fas fa-phone"></i> 091260577
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCHOLARSHIP CARDS -->
+        <div class="scholarship-cards">
+            <!-- CARD 1: Voucher Program -->
+            <div class="scholarship-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Voucher Program for Incoming Grade 11</h3>
+                </div>
+                <div class="card-body">
+                    <div class="card-section">
+                        <h4 class="section-label">
+                            <i class="fas fa-list-check"></i> Requirements
+                        </h4>
+                        <ul class="requirements-list">
+                            <li>A Grade 10 graduate from any PUBLIC SCHOOL, S.Y. 2025–2026</li>
+                            <li>Grade 10 Card</li>
+                            <li>Birth Certificate (PSA Xerox Copy)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-section">
+                        <h4 class="section-label">
+                            <i class="fas fa-gift"></i> Benefits
+                        </h4>
+                        <ul class="benefits-list">
+                            <li>FREE Tuition and Miscellaneous Fees</li>
+                            <li>FREE Cloth for School Uniform, ID, P.E. T-Shirts, and Notebooks</li>
+                            <li>NO Top-Up</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2: TLC Scholarship -->
+            <div class="scholarship-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Taguig Learners' Certificate (TLC) – Incoming Grade 7</h3>
+                </div>
+                <div class="card-body">
+                    <div class="card-section">
+                        <h4 class="section-label">
+                            <i class="fas fa-list-check"></i> Qualifications
+                        </h4>
+                        <ul class="requirements-list">
+                            <li>A Grade 6 graduate from any PUBLIC SCHOOL in Taguig City only, S.Y. 2025–2026</li>
+                            <li>Has spent at least 3 years in the school</li>
+                            <li>One (1) parent must be a registered and active voter in Taguig City</li>
+                            <li>Must be a resident of Taguig City for not less than 3 years</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-section">
+                        <h4 class="section-label">
+                            <i class="fas fa-gift"></i> Benefits
+                        </h4>
+                        <ul class="benefits-list">
+                            <li>FREE Tuition and Miscellaneous Fees</li>
+                            <li>FREE Cloth for School Uniform, ID, Notebooks, Books, and P.E. Uniform</li>
+                            <li>₱2,000 allowance per year</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+   SECTION: FREQUENTLY ASKED QUESTIONS
+   ======================================== -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Here are some common questions from students and parents regarding admissions and enrollment.</p>
+
+        <div class="faq-container">
+            <!-- Question 1 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">When does enrollment start?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Enrollment usually begins before the start of the academic year. Students and parents are encouraged to visit the registrar's office to confirm the exact enrollment schedule.</p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Can I apply for enrollment as a walk-in applicant?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. The school accepts walk-in applicants. Students may visit the registrar's office and submit the necessary admission requirements.</p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">What documents are required for enrollment?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Students must submit the required documents depending on their level, such as report cards, birth certificate, and other necessary school records.</p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">How can I apply for the TLC Scholarship?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Students who wish to apply for the Taguig Learners' Certificate (TLC) Scholarship may request an application form at the registrar's office and submit the required qualifications.</p>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Who can apply for the DepEd Senior High School Voucher Program?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Students who graduated from a public junior high school may qualify for the DepEd SHS Voucher Program. They must submit the required documents during enrollment.</p>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Can transferee students enroll in the school?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. Transferee students are welcome to apply as long as they provide the required documents such as report cards, good moral certificate, and permanent records.</p>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Where can I inquire for more information?</span>
+                    <span class="faq-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Students and parents may visit the school registrar's office or contact the school using the provided phone numbers on the website.</p>
+                </div>
             </div>
         </div>
     </div>

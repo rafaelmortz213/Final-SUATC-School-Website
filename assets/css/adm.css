@@ -834,3 +834,395 @@
         margin-bottom: 25px;
     }
 }
+
+/* ========================================
+   SECTION: SCHOLARSHIPS
+   ======================================== */
+.scholarships-section {
+    padding: var(--section-padding);
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+/* --- INQUIRY INFORMATION BOX --- */
+.inquiry-box {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--accent-color);
+}
+
+.inquiry-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.inquiry-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.inquiry-content h3 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.phone-numbers {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.phone-number {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.phone-number:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.phone-number i {
+    font-size: 1rem;
+}
+
+.separator {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+/* --- SCHOLARSHIP CARDS CONTAINER --- */
+.scholarship-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* --- SCHOLARSHIP CARD --- */
+.scholarship-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid #e0e0e0;
+}
+
+.scholarship-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+/* --- CARD HEADER --- */
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    padding: 25px;
+    text-align: center;
+    color: var(--text-light);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.card-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- CARD BODY --- */
+.card-body {
+    padding: 30px;
+}
+
+/* --- CARD SECTIONS --- */
+.card-section {
+    margin-bottom: 25px;
+}
+
+.card-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-label {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-label i {
+    font-size: 1.2rem;
+}
+
+/* --- REQUIREMENTS LIST --- */
+.requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirements-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.requirements-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* --- BENEFITS LIST --- */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background-color: rgba(255, 215, 0, 0.05);
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.benefits-list li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.benefits-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* --- TABLET --- */
+@media (max-width: 1024px) {
+    .inquiry-box {
+        padding: 25px;
+    }
+
+    .inquiry-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .inquiry-icon i {
+        font-size: 1.5rem;
+    }
+
+    .inquiry-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .phone-number {
+        font-size: 1rem;
+    }
+
+    .scholarship-cards {
+        gap: 25px;
+    }
+
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .inquiry-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .inquiry-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .inquiry-icon i {
+        font-size: 1.3rem;
+    }
+
+    .inquiry-content h3 {
+        font-size: 1rem;
+    }
+
+    .phone-numbers {
+        justify-content: center;
+    }
+
+    .phone-number {
+        font-size: 0.95rem;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .scholarship-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card-header {
+        padding: 20px;
+    }
+
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .section-label {
+        font-size: 1rem;
+    }
+
+    .requirements-list li,
+    .benefits-list li {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- SMALL MOBILE --- */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .inquiry-box {
+        padding: 18px;
+    }
+
+    .inquiry-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .inquiry-icon i {
+        font-size: 1.2rem;
+    }
+
+    .inquiry-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .phone-number {
+        font-size: 0.9rem;
+    }
+
+    .card-header {
+        padding: 18px;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    .card-header h3 {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 18px;
+    }
+
+    .section-label {
+        font-size: 0.95rem;
+    }
+
+    .requirements-list li,
+    .benefits-list li {
+        font-size: 0.85rem;
+        padding-left: 20px;
+    }
+
+    .requirements-list li::before,
+    .benefits-list li::before {
+        font-size: 1rem;
+    }
+}
+
